@@ -1,13 +1,17 @@
 package main
 
-func main() {
-	calc := calculator{
-		a: 2,
-		b: 3,
-	}
+import (
+	"github.com/Looty/go-calculator/calculator"
+	"log"
+)
 
-	calc.Add()
-	calc.Mul()
-	calc.Div()
-	calc.Sub()
+func main() {
+	a, _ := calculator.Add(1, 2)
+	log.Println(a)
+
+	b, err := calculator.Div(1, 4)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Println(b)
 }
