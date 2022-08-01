@@ -36,15 +36,12 @@ var DivTests = []Test{
 	{16, 8, 2},
 	{121, 11, 11},
 	{33, 3, 11},
+	{2, 0, 0},
 }
 
 func TestAdd(t *testing.T) {
 	for _, test := range addTests {
-		res, err := Add(test.a, test.b)
-
-		if err != nil {
-			t.Errorf("Error %q not equal to expected %q", err, test.expected)
-		}
+		res, _ := Add(test.a, test.b)
 
 		if res != test.expected {
 			t.Errorf("Output %q not equal to expected %q", res, test.expected)
@@ -54,11 +51,7 @@ func TestAdd(t *testing.T) {
 
 func TestSub(t *testing.T) {
 	for _, test := range SubTests {
-		res, err := Sub(test.a, test.b)
-
-		if err != nil {
-			t.Errorf("Error %e not equal to expected %d", err, test.expected)
-		}
+		res, _ := Sub(test.a, test.b)
 
 		if res != test.expected {
 			t.Errorf("Output %d not equal to expected %d", res, test.expected)
@@ -68,11 +61,7 @@ func TestSub(t *testing.T) {
 
 func TestMul(t *testing.T) {
 	for _, test := range MulTests {
-		res, err := Mul(test.a, test.b)
-
-		if err != nil {
-			t.Errorf("Error %e not equal to expected %d", err, test.expected)
-		}
+		res, _ := Mul(test.a, test.b)
 
 		if res != test.expected {
 			t.Errorf("Output %d not equal to expected %d", res, test.expected)
@@ -82,11 +71,7 @@ func TestMul(t *testing.T) {
 
 func TestDiv(t *testing.T) {
 	for _, test := range DivTests {
-		res, err := Div(test.a, test.b)
-
-		if err != nil {
-			t.Errorf("Error %e not equal to expected %d", err, test.expected)
-		}
+		res, _ := Div(test.a, test.b)
 
 		if res != test.expected {
 			t.Errorf("Output %d not equal to expected %d", res, test.expected)
