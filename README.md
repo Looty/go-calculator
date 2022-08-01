@@ -1,10 +1,8 @@
 ## go-calculator
-___
 Simple calculator made in go
 
 
 ## Usage
-___
 ```golang
 package main
 
