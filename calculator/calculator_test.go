@@ -36,6 +36,7 @@ var DivTests = []Test{
 	{16, 8, 2},
 	{121, 11, 11},
 	{33, 3, 11},
+	{2, 0, 0},
 }
 
 func TestAdd(t *testing.T) {
